@@ -7,4 +7,8 @@ describe("Coach offer requirements", () => {
     assert.equal(offer.minimumDeals, 4);
     assert.equal(offer.maximumDeals, 5);
   });
+
+  it("pays out a $750 gift card", () => {
+    assert.match(offer.reward, /^\$750 Coach gift card$/);
+  });
 });

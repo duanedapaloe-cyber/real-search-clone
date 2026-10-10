@@ -3,5 +3,7 @@ export const offer = {
   audience: "Women",
   minimumDeals: 4,
   maximumDeals: 5,
-  reward: "$500 Coach gift card",
+  reward: "$750 Coach gift card",
+  /** Claim Now destination. Empty until the offer provider supplies the link. */
+  ctaUrl: "",
 };
