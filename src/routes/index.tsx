@@ -36,6 +36,15 @@ function Registration() {
   const [openQuestion, setOpenQuestion] = useState<number | null>(null);
   const [loading, setLoading] = useState(false);
   const [notice, setNotice] = useState("");
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 1024px)");
+    const update = () => setIsDesktop(mediaQuery.matches);
+    update();
+    mediaQuery.addEventListener("change", update);
+    return () => mediaQuery.removeEventListener("change", update);
+  }, []);
 
   useEffect(() => {
     if (!loading) return;
