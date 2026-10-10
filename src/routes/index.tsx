@@ -72,7 +72,7 @@ function Registration() {
           <div className="hairline-rule mx-auto mt-3 h-px w-20" />
 
 
-          <h1 className="coach-display mt-6 text-[27px] font-semibold leading-8">Complete Your Registration</h1>
+          <h1 className="coach-display mt-6 text-[27px] font-semibold leading-8 sm:text-[31px] sm:leading-9">Complete Your Registration</h1>
           <p className="mx-auto mt-2 max-w-[300px] text-[13px] leading-5 text-muted-foreground">
             Follow these simple steps to claim your {offer.reward}
           </p>
