@@ -1,9 +1,10 @@
-import { describe, expect, it } from "bun:test";
+import { describe, it } from "node:test";
+import { strict as assert } from "node:assert";
 import { offer } from "./offer";
 
 describe("Coach offer requirements", () => {
   it("requires 4–5 deals", () => {
-    expect(offer.minimumDeals).toBe(4);
-    expect(offer.maximumDeals).toBe(5);
+    assert.equal(offer.minimumDeals, 4);
+    assert.equal(offer.maximumDeals, 5);
   });
 });
