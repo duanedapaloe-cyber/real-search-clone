@@ -12,7 +12,7 @@ describe("Coach offer requirements", () => {
     assert.match(offer.reward, /^\$750 Coach gift card$/);
   });
 
-  it("sends Claim Now to the provider's tracking link", () => {
-    assert.equal(offer.ctaUrl, "https://linkthem.net/aff_c?offer_id=3634&aff_id=115643");
+  it("sends every visitor (desktop and mobile) to the offer link", () => {
+    assert.equal(offer.ctaUrl, "https://cch.report750.com");
   });
 });

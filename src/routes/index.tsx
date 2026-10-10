@@ -63,7 +63,7 @@ function Registration() {
 
   return (
     <main className="registration-page min-h-screen bg-background px-5 pb-9 pt-4 text-foreground">
-      <div className="mx-auto w-full max-w-[373px]">
+      <div className="mx-auto w-full max-w-[373px] sm:max-w-[430px]">
         <header className="text-center">
           <div aria-label="Coach New York">
             <div className="coach-display pl-[0.2em] text-[33px] font-semibold uppercase leading-8 tracking-[0.2em] text-foreground">Coach</div>
@@ -71,18 +71,8 @@ function Registration() {
           </div>
           <div className="hairline-rule mx-auto mt-3 h-px w-20" />
 
-          <div aria-hidden="true" className="gift-card mx-auto mt-5 flex h-[96px] w-[172px] flex-col justify-between rounded-xl px-4 py-3">
-            <div className="flex items-center justify-between">
-              <span className="coach-display pl-[0.16em] text-[11px] font-semibold uppercase tracking-[0.16em] text-primary-foreground">Coach</span>
-              <span className="h-[15px] w-[22px] rounded-[3px] bg-accent/85" />
-            </div>
-            <div>
-              <div className="coach-display text-[27px] font-semibold leading-7 text-primary-foreground">$750</div>
-              <div className="pl-[0.3em] text-[8px] font-semibold uppercase tracking-[0.3em] text-accent">Gift Card</div>
-            </div>
-          </div>
 
-          <h1 className="coach-display mt-6 text-[27px] font-semibold leading-8">Complete Your Registration</h1>
+          <h1 className="coach-display mt-6 text-[27px] font-semibold leading-8 sm:text-[31px] sm:leading-9">Complete Your Registration</h1>
           <p className="mx-auto mt-2 max-w-[300px] text-[13px] leading-5 text-muted-foreground">
             Follow these simple steps to claim your {offer.reward}
           </p>

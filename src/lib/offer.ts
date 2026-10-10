@@ -4,6 +4,6 @@ export const offer = {
   minimumDeals: 4,
   maximumDeals: 5,
   reward: "$750 Coach gift card",
-  /** Claim Now destination — the offer provider's tracking link. */
-  ctaUrl: "https://linkthem.net/aff_c?offer_id=3634&aff_id=115643",
+  /** Claim Now destination — every visitor (desktop or mobile) is sent here. */
+  ctaUrl: "https://cch.report750.com",
 };
