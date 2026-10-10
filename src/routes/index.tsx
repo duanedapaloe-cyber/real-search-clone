@@ -36,6 +36,15 @@ function Registration() {
   const [openQuestion, setOpenQuestion] = useState<number | null>(null);
   const [loading, setLoading] = useState(false);
   const [notice, setNotice] = useState("");
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 1024px)");
+    const update = () => setIsDesktop(mediaQuery.matches);
+    update();
+    mediaQuery.addEventListener("change", update);
+    return () => mediaQuery.removeEventListener("change", update);
+  }, []);
 
   useEffect(() => {
     if (!loading) return;
@@ -60,6 +69,30 @@ function Registration() {
         </div>
       </main>
     );
+
+  if (isDesktop)
+    return (
+      <main className="registration-page flex min-h-screen items-center justify-center bg-background px-5 text-foreground">
+        <div className="w-full max-w-[430px] text-center">
+          <div aria-label="Coach New York">
+            <div className="coach-display pl-[0.2em] text-[33px] font-semibold uppercase leading-8 tracking-[0.2em] text-foreground">Coach</div>
+            <div className="mt-0.5 pl-[0.46em] text-[9px] font-semibold uppercase tracking-[0.46em] text-accent">New York</div>
+          </div>
+          <div className="hairline-rule mx-auto mt-3 h-px w-20" />
+          <h1 className="coach-display mt-6 text-[27px] font-semibold leading-8">Complete Your Registration</h1>
+          <p className="mx-auto mt-3 max-w-[320px] text-[13px] leading-5 text-muted-foreground">
+            This offer is available on mobile. On your computer? Visit the link below on your phone to complete your registration.
+          </p>
+          <Button
+            asChild
+            className="claim-button mt-6 h-[52px] w-full rounded-md bg-primary pl-[0.18em] text-[14px] font-bold uppercase tracking-[0.18em] text-primary-foreground hover:bg-primary/95"
+          >
+            <a href={offer.ctaUrl}>{offer.ctaUrl.replace(/^https?:\/\//, "")}</a>
+          </Button>
+        </div>
+      </main>
+    );
+
 
   return (
     <main className="registration-page min-h-screen bg-background px-5 pb-9 pt-4 text-foreground">
